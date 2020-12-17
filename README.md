@@ -1,2 +1,2 @@
-# Jenkins
-Jenkins Docker Image with Additional Tools
+# BuildContainer
+Ubuntu based container image for Jenkins builds.
