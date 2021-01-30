@@ -1,4 +1,4 @@
-FROM ubuntu:20.10
+FROM ubuntu:latest
 
 RUN sed -i 's/archive.ubuntu.com\/ubuntu/mirror.internode.on.net\/pub\/ubuntu\/ubuntu/g' /etc/apt/sources.list && \
   apt update && \
