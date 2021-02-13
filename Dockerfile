@@ -3,7 +3,7 @@ FROM ubuntu:latest
 RUN sed -i 's/archive.ubuntu.com\/ubuntu/mirror.internode.on.net\/pub\/ubuntu\/ubuntu/g' /etc/apt/sources.list && \
   apt update && \
   apt -y upgrade && \
-  apt install -y git gnupg-agent wget curl
+  apt install -y git gnupg-agent wget curl net-tools dnsutils iputils-ping
 
 RUN apt-key adv --fetch-keys https://download.docker.com/linux/ubuntu/gpg && \
   echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(grep "VERSION_CODENAME=" /etc/os-release | awk -F= {' print $2'} | sed s/\"//g) stable" >> /etc/apt/sources.list && \
