@@ -2,8 +2,7 @@ FROM ubuntu:latest
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-RUN sed -i 's/archive.ubuntu.com\/ubuntu/mirror.internode.on.net\/pub\/ubuntu\/ubuntu/g' /etc/apt/sources.list && \
-  apt update && \
+RUN apt update && \
   apt -y upgrade && \
   apt install -y git gnupg-agent wget curl net-tools dnsutils iputils-ping
 
